@@ -1,4 +1,5 @@
 Welcome to XNat.  
+![image](https://github.com/yiming-47/2020-NYMU-XNAT-QAQ/blob/main/small.gif)
 
 ![image](https://github.com/yiming-47/2020-NYMU-XNAT-QAQ/blob/main/fast-parrot.gif)
 
