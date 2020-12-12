@@ -21,25 +21,9 @@ print('Current Date: %s\npyXNAT version: %s\nXNATpy version: %s'
 # Session Implementation
 session = pyxnat.Interface('http://120.126.47.114', # Connect to Server (website https / IP)
                            user = 'admin', # Username Registered
-                           password = 'admin') # Password
+                           password = 'admin123') # Password
 
-# HTTP Get
-## Projects Under the Path
-### ls_project = session.select.projects().get()
-#####
-# Uploading
-#####
-
-def download(filepath):
-      dirName = os.path.join('D:\XNat\XNat Download', projectID)
-      if not os.path.exists(dirName):
-            os.mkdir(dirName)
-            print("Directory " , dirName ,  " Created ")
-      else:    
-            print("Directory " , dirName ,  " already exists")
-  
-#projectID = str(input('please input project name：')) #input project id
-projectID = 'test2' #input project id
+projectID = input('plz input Project ID: ') #input project id
 subjects = session.select.project(projectID).subjects().get() #how many subjects
 print(subjects)
 allSessions = []
@@ -60,7 +44,6 @@ else:
 Results_Dir = dirName
 number_subjects = 0
 subjectCounter = 0 
-path = r'D:\XNat\upload\1.2.528.1.1001.200.10.4573.2021.3754721344.20190923031720119\SDY00000\SRS00000'
 for s, subjectID in enumerate(subjects):  # s: number n ,subjectID : number n subjectID
       subjectLabel = session.select.project(projectID).subject(subjectID).label() #subject Name
       for experimentID in allSessions[s]:
